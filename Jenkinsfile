@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            bat '    bat "\\"${tool \'MsBuild\'}\\" "HelloJenkinsProject\\\\HelloJenkinsProject.sln" /p:Configuration=Debug /p:Platform=Platform -t:build"'
+            echo 'echo Build'
           }
         }
 
         stage('Deploy') {
           steps {
-            echo 'Deployinggggg'
+            echo 'echo Deploy'
           }
         }
 
